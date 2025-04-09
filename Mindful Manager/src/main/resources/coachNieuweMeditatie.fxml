@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxControllers.CoachNieuweMeditatieController">
+    <children>
+        <Pane prefHeight="657.0" prefWidth="894.0" style="-fx-background-color: #97686A;">
+            <children>
+                <Pane prefHeight="658.0" prefWidth="154.0" style="-fx-background-color: #689795;">
+                    <children>
+                        <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mindful Manager" wrappingWidth="136.53671646118164">
+                            <font>
+                                <Font name="Bell MT" size="33.0" />
+                            </font>
+                        </Text>
+                        <Button fx:id="meditatiesKnop" layoutX="17.0" layoutY="154.0" mnemonicParsing="false" onAction="#openMeditaties" prefHeight="47.0" prefWidth="121.0" style="-fx-background-color: #688297; -fx-background-radius: 15;" text="Meditaties">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="afsprakenKnop" layoutX="17.0" layoutY="241.0" mnemonicParsing="false" onAction="#openAfspraken" prefHeight="47.0" prefWidth="121.0" style="-fx-background-color: #688297; -fx-background-radius: 15;" text="Afspraken">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="tijdslotenKnop" layoutX="17.0" layoutY="329.0" mnemonicParsing="false" onAction="#openTijdsloten" prefHeight="47.0" prefWidth="121.0" style="-fx-background-color: #688297; -fx-background-radius: 15;" text="Tijdsloten">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="clientenKnop" layoutX="17.0" layoutY="415.0" mnemonicParsing="false" onAction="#openClienten" prefHeight="47.0" prefWidth="121.0" style="-fx-background-color: #688297; -fx-background-radius: 15;" text="Clienten">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+                <Pane layoutX="153.0" prefHeight="117.0" prefWidth="740.0" style="-fx-background-color: #689795;">
+                    <children>
+                        <Text layoutX="187.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nieuwe meditatie" wrappingWidth="366.13677978515625">
+                            <font>
+                                <Font name="Bell MT" size="50.0" />
+                            </font>
+                        </Text>
+                        <Button fx:id="homeKnop" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#openHome" prefHeight="47.0" prefWidth="121.0" style="-fx-background-color: #688297; -fx-background-radius: 15;" text="Home">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+            <Pane layoutX="273.0" layoutY="145.0" prefHeight="478.0" prefWidth="500.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+               <children>
+                  <TextField fx:id="naamField" layoutX="176.0" layoutY="38.0" />
+                  <Text layoutX="233.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Naam:" />
+                  <Text layoutX="201.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lengte in minuten:" />
+                  <Text layoutX="229.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau:" />
+                  <TextField fx:id="lengteField" layoutX="176.0" layoutY="99.0" />
+                  <TextField fx:id="niveauField" layoutX="175.0" layoutY="164.0" />
+                  <Text layoutX="191.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spraakbestand (mp3):" />
+                  <VBox fx:id="dropBox" alignment="CENTER" layoutX="150.0" layoutY="226.0" onDragDropped="#onDragDropped" onDragOver="#onDragOver" prefHeight="162.0" prefWidth="198.0" style="-fx-background-color: #688297; -fx-background-radius: 12;">
+                     <children>
+                        <Label fx:id="dropLabel" text="Drop bestand hier..." />
+                     </children>
+                  </VBox>
+                  <Button fx:id="aanmakenKnop" layoutX="214.0" layoutY="397.0" mnemonicParsing="false" onAction="#nieuweMeditatieAanmaken" style="-fx-background-color: #689795;" text="Aanmaken" />
+                  <Label fx:id="aangemaaktLabel" layoutX="143.0" layoutY="437.0" prefHeight="17.0" prefWidth="213.0" />
+               </children>
+            </Pane>
+            </children>
+        </Pane>
+    </children>
+</VBox>

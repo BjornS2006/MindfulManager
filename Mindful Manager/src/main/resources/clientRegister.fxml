@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.PasswordField?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxControllers.ClientRegisterController">
+   <children>
+      <Pane prefHeight="657.0" prefWidth="894.0" style="-fx-background-color: #97686A;">
+         <children>
+            <Text layoutX="326.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registreren" textAlignment="CENTER">
+               <font>
+                  <Font name="Bell MT" size="50.0" />
+               </font>
+            </Text>
+            <TextField fx:id="voornaamFieldR" layoutX="252.0" layoutY="188.0" promptText="Voornaam" />
+            <TextField fx:id="achternaamFieldR" layoutX="493.0" layoutY="188.0" promptText="Achternaam" />
+            <TextField fx:id="emailFieldR" layoutX="252.0" layoutY="279.0" promptText="example@gmail.com" />
+            <TextField fx:id="telefoonnummerFieldR" layoutX="493.0" layoutY="279.0" promptText="06 12345678" />
+            <TextField fx:id="adresFieldR" layoutX="252.0" layoutY="363.0" promptText="voorbeeldstraat 69" />
+            <TextField fx:id="woonplaatsFieldR" layoutX="493.0" layoutY="363.0" promptText="voorbeeldstad" />
+            <Text layoutX="417.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Naam">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="264.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail adres">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="480.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefoonnummer">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="297.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adres">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="506.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Woonplaats">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="wachtwoordFieldR" layoutX="252.0" layoutY="545.0" promptText="Wachtwoord" />
+            <PasswordField fx:id="wachtwoordFieldR2" layoutX="493.0" layoutY="545.0" promptText="Wachtwoord bevestigen" />
+            <Text layoutX="261.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wachtwoord">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="444.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wachtwoord bevestigen">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Button fx:id="registerKnop" layoutX="374.0" layoutY="594.0" mnemonicParsing="false" onAction="#registreren" style="-fx-background-color: #689795;" text="Registreren">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Text layoutX="363.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Geboortedatum">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <TextField fx:id="geboortedatumField" layoutX="370.0" layoutY="448.0" promptText="JJJJ-MM-DD" />
+            <Label fx:id="errorLabel" layoutX="544.0" layoutY="597.0" prefHeight="50.0" prefWidth="215.0" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
