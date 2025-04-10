@@ -26,9 +26,7 @@ public class Client extends Gebruiker implements IZoek {
         this.woonplaats = woonplaats;
         this.notities = notities;
         this.geboortedatum = geboortedatum;
-        this.meditaties = getMeditaties();
-        this.afspraken = getAfspraken();
-        this.tijdsloten = getTijdsloten();
+
     }
     public Client (String voornaam, String achternaam, String email, String telnr, String wachtwoord
             ,int niveau, String adres, String woonplaats, String notities, Date geboortedatum) {
@@ -38,6 +36,18 @@ public class Client extends Gebruiker implements IZoek {
         this.woonplaats = woonplaats;
         this.notities = notities;
         this.geboortedatum = geboortedatum;
+
+    }
+    public Client (int idClient, String voornaam, String achternaam, String email, String telnr, String wachtwoord, int niveau, String adres, String woonplaats, String notities, Date geboortedatum) {
+        super(voornaam, achternaam, email, telnr, wachtwoord);
+        this.idClient = idClient;
+        this.niveau = niveau;
+        this.adres = adres;
+        this.woonplaats = woonplaats;
+        this.notities = notities;
+        this.geboortedatum = geboortedatum;
+    }
+    public void fillLists () {
         this.meditaties = getMeditaties();
         this.afspraken = getAfspraken();
         this.tijdsloten = getTijdsloten();
@@ -74,7 +84,7 @@ public class Client extends Gebruiker implements IZoek {
     protected ArrayList<Meditatie> getMeditaties() {
         meditaties = new ArrayList<>();
         try (Connection connection = DatabaseUtil.getConnection()) {
-            String query = "SELECT idMeditatie, niveau, lengte, meditatieNaam FROM meditatie WHERE niveau = ?";
+            String query = "SELECT idMeditatie, niveau, lengte, meditatieNaam FROM meditatie WHERE niveau <= ?";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setInt(1, ClientSession.getActieveClient().getNiveau());
             ResultSet rs = statement.executeQuery();

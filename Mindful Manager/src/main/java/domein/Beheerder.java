@@ -42,12 +42,12 @@ public class Beheerder extends Gebruiker implements IZoek {
             while (rs.next()) {
                 Client client = new Client(
 
+                        rs.getInt("idClient"),
                         rs.getString("voornaam"),
                         rs.getString("achternaam"),
                         rs.getString("email"),
                         rs.getString("telnr"),
                         rs.getString("wachtwoord"),
-                        rs.getInt("idClient"),
                         rs.getInt("niveau"),
                         rs.getString("adres"),
                         rs.getString("woonplaats"),

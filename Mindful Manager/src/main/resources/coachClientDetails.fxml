@@ -77,7 +77,7 @@
             <Button fx:id="nieuweNotitieKnop" layoutX="677.0" layoutY="439.0" mnemonicParsing="false" onAction="#nieuweNotitieAanmaken" style="-fx-background-color: #689795;" text="Aanmaken" />
             <TextField fx:id="niveauVerhogenField" layoutX="675.0" layoutY="520.0" promptText="nieuw niveau" />
             <Text layoutX="676.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau verhogen:" />
-            <Button fx:id="verhogenKnop" layoutX="675.0" layoutY="563.0" mnemonicParsing="false" onAction="#niveauVerhogen" style="-fx-background-color: #689795;" text="Button" />
+            <Button fx:id="verhogenKnop" layoutX="675.0" layoutY="563.0" mnemonicParsing="false" onAction="#niveauVerhogen" style="-fx-background-color: #689795;" text="Verhogen" />
             </children>
         </Pane>
     </children>

@@ -83,6 +83,7 @@ public class ClientLoginController {
                             geboortedatum
                     );
                     ClientSession.setActieveClient(actieveClient);
+                    ClientSession.getActieveClient().fillLists();
                     isValid = true;
                 }
             }
