@@ -1,9 +1,10 @@
 module MindfulManager {
-    requires java.sql;
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
     requires javafx.media;
+    requires java.sql;
+
 
     exports domein;
     exports fxControllers;
