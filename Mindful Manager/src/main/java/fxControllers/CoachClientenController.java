@@ -116,6 +116,7 @@ public class CoachClientenController {
                         e.printStackTrace();
                     }
                 });
+                clientenVbox.getChildren().add(button);
             }
         }
     }
